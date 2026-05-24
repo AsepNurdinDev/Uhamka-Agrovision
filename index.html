@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uhamka Agrovision - Penyedia Domba Berkualitas & Siap Kirim</title>
+    
+    <link rel="icon" type="image/png" href="/assets/images/logo.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <img src="/assets/images/logo.jpeg" alt="Logo Uhamka Agrovision" class="w-12 h-12 object-cover rounded-full shadow-md">
+            <div>
+                <h1 class="font-bold text-xl text-emerald-700 tracking-tight">Uhamka Agrovision</h1>
+                <p class="text-xs text-gray-500 font-medium">Peternakan Domba Modern & Berkualitas</p>
+            </div>
+        </div>
+
+        <nav id="nav-menu" class="hidden md:flex absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none flex-col md:flex-row items-center md:space-x-6 space-y-4 md:space-y-0 py-4 md:py-0 border-t md:border-t-0 border-gray-100 font-medium text-gray-600 transition-all duration-300">
+            <a href="#home" class="hover:text-emerald-600 transition block w-full text-center md:w-auto">Beranda</a>
+            <a href="#keunggulan" class="hover:text-emerald-600 transition block w-full text-center md:w-auto">Keunggulan</a>
+            <a href="#layanan" class="hover:text-emerald-600 transition block w-full text-center md:w-auto">Layanan</a>
+            <a href="#harga" class="hover:text-emerald-600 transition block w-full text-center md:w-auto">Daftar Harga</a>
+            <a href="#lokasi" class="hover:text-emerald-600 transition block w-full text-center md:w-auto">Lokasi</a>
+            <a href="https://wa.me/6281235117043?text=Halo%20Uhamka%20Agrovision,%20saya%20ingin%20tanya%20mengenai%20stok%20dan%20pembelian%20domba" target="_blank" class="md:hidden bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold flex items-center space-x-2 transition shadow-md w-11/12 justify-center mx-auto">
+                <i class="fab fa-whatsapp text-lg"></i>
+                <span>Hubungi Kami</span>
+            </a>
+        </nav>
+
+        <a href="https://wa.me/6281235117043?text=Halo%20Uhamka%20Agrovision,%20saya%20ingin%20tanya%20mengenai%20stok%20dan%20pembelian%20domba" target="_blank" class="hidden md:flex bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl text-sm font-semibold items-center space-x-2 transition shadow-md shadow-emerald-100">
+            <i class="fab fa-whatsapp text-lg"></i>
+            <span>Hubungi Kami</span>
+        </a>
+
+        <button id="menu-btn" class="md:hidden p-2 text-gray-600 focus:outline-none hover:text-emerald-600 transition">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuBtn.addEventListener('click', () => {
+            // Toggle kelas 'hidden' dan mengubah flex-direction
+            if (navMenu.classList.contains('hidden')) {
+                navMenu.classList.remove('hidden');
+                navMenu.classList.add('flex');
+            } else {
+                navMenu.classList.add('hidden');
+                navMenu.classList.remove('flex');
+            }
+        });
+
+        // Menutup menu secara otomatis saat salah satu link navigasi diklik di HP
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) { // 768px adalah breakpoint 'md' di Tailwind
+                    navMenu.classList.add('hidden');
+                    navMenu.classList.remove('flex');
+                }
+            });
+        });
+    </script>
+</header>
+
+    <section id="home" class="relative bg-emerald-900 text-white py-24 px-4 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="container mx-auto max-w-5xl text-center relative z-10">
+            <span class="bg-emerald-800 text-emerald-300 text-xs uppercase tracking-widest font-bold px-4 py-1.5 rounded-full border border-emerald-700">Langsung dari Peternakan Jonggol</span>
+            <h2 class="text-4xl md:text-6xl font-extrabold mt-4 mb-6 leading-tight">
+                Penyedia Domba Jantan Berkualitas & Siap Kirim
+            </h2>
+            <p class="text-emerald-100 text-lg md:text-xl max-w-3xl mx-auto mb-10 font-light">
+                Kami melayani penjualan domba hidup maupun karkas dalam skala kecil dan besar. Siap menyuplai kebutuhan harian, aqiqah, usaha kuliner, hingga keperluan ibadah kurban Anda kapan saja.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#harga" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-amber-950 font-bold px-8 py-3.5 rounded-xl transition shadow-lg text-center">
+                    Cek Daftar Harga Timbangan
+                </a>
+                <a href="https://wa.me/6281235117043?text=Halo%20Uhamka%20Agrovision,%20saya%20tertarik%20untuk%20membeli%20domba" target="_blank" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 px-8 py-3.5 rounded-xl font-semibold transition text-center flex items-center justify-center space-x-2">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Hubungi Admin Penjualan</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="keunggulan" class="py-16 px-4 max-w-5xl mx-auto">
+        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="flex items-center space-x-3 p-4 bg-white rounded-xl border border-gray-100 shadow-sm">
+                <i class="fa-solid fa-scale-balanced text-2xl text-emerald-600"></i>
+                <div>
+                    <h4 class="font-bold text-sm">Timbangan Akurat</h4>
+                    <p class="text-xs text-gray-500">Harga adil sesuai berat</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3 p-4 bg-white rounded-xl border border-gray-100 shadow-sm">
+                <i class="fa-solid fa-truck text-2xl text-emerald-600"></i>
+                <div>
+                    <h4 class="font-bold text-sm">Pengiriman Siap</h4>
+                    <p class="text-xs text-gray-500">Siap antar ke lokasi</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3 p-4 bg-white rounded-xl border border-gray-100 shadow-sm">
+                <i class="fa-solid fa-heart-pulse text-2xl text-emerald-600"></i>
+                <div>
+                    <h4 class="font-bold text-sm">Kesehatan Terjamin</h4>
+                    <p class="text-xs text-gray-500">Perawatan intensif harian</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3 p-4 bg-white rounded-xl border border-gray-100 shadow-sm">
+                <i class="fa-solid fa-handshake text-2xl text-emerald-600"></i>
+                <div>
+                    <h4 class="font-bold text-sm">Transaksi Mudah</h4>
+                    <p class="text-xs text-gray-500">Bisa langsung ke kandang</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="layanan" class="py-12 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-emerald-600 font-bold text-xs uppercase tracking-widest">Kapasitas Produksi</span>
+            <h3 class="text-3xl font-bold text-gray-900 mt-2">Melayani Segala Kebutuhan Domba</h3>
+            <p class="text-gray-500 text-sm mt-1">Satu peternakan untuk semua keperluan konsumsi dan ibadah Anda</p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:border-emerald-500 transition">
+                <div class="w-10 h-10 bg-emerald-50 text-emerald-700 rounded-xl flex items-center justify-center text-lg mb-4">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 mb-2 text-base">Suplai Kuliner</h4>
+                <p class="text-xs text-gray-500 leading-relaxed">Kebutuhan daging reguler atau karkas untuk warung sate, restoran, katering, dan hotel.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:border-emerald-500 transition">
+                <div class="w-10 h-10 bg-emerald-50 text-emerald-700 rounded-xl flex items-center justify-center text-lg mb-4">
+                    <i class="fa-solid fa-baby"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 mb-2 text-base">Aqiqah & Syukuran</h4>
+                <p class="text-xs text-gray-500 leading-relaxed">Menyediakan domba hidup atau paket potong yang sah sesuai tuntunan syariat islam.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:border-emerald-500 transition">
+                <div class="w-10 h-10 bg-emerald-50 text-emerald-700 rounded-xl flex items-center justify-center text-lg mb-4">
+                    <i class="fa-solid fa-mosque"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 mb-2 text-base">Hewan Kurban</h4>
+                <p class="text-xs text-gray-500 leading-relaxed">Penyediaan hewan ternak pilihan menjelang hari raya Iduladha dengan kondisi sehat dan prima.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:border-emerald-500 transition">
+                <div class="w-10 h-10 bg-emerald-50 text-emerald-700 rounded-xl flex items-center justify-center text-lg mb-4">
+                    <i class="fa-solid fa-house-chimney-user"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 mb-2 text-base">Konsumsi Harian</h4>
+                <p class="text-xs text-gray-500 leading-relaxed">Pembelian eceran atau retail bagi masyarakat umum yang membutuhkan stock daging segar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="harga" class="py-16 px-4 max-w-6xl mx-auto bg-white rounded-3xl shadow-xl shadow-gray-200/40 border border-gray-100">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-gray-900">Daftar Harga Live & Karkas</h3>
+            <p class="text-gray-500 mt-2">Penjualan transparan dihitung adil berdasarkan bobot riil per kilogram</p>
+            <div class="flex flex-wrap justify-center gap-3 mt-4 text-xs font-semibold">
+                <span class="bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full border border-emerald-100"><i class="fa-solid fa-tag mr-1"></i> Dugul (Karkas): Rp 80.000 / Kg</span>
+                <span class="bg-amber-50 text-amber-800 px-4 py-2 rounded-full border border-amber-100"><i class="fa-solid fa-tag mr-1"></i> Tanduk (Karkas): Rp 90.000 / Kg</span>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 px-4 md:px-8">
+            <div class="border border-gray-200 rounded-2xl overflow-hidden">
+                <div class="bg-emerald-700 p-4 text-white text-center">
+                    <h4 class="text-xl font-bold">Domba Jantan Dugul</h4>
+                </div>
+                <div class="h-80 bg-gray-100 relative">
+                    <img src="/assets/images/domba-dugul.png" alt="Domba Jantan Dugul" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4 space-y-2.5 text-sm">
+                    <div class="flex justify-between items-center p-2.5 bg-gray-50 rounded-lg">
+                        <div><span class="font-bold">Tipe A</span> <span class="text-xs text-gray-500">(17-20 Kg)</span></div>
+                        <span class="font-bold text-gray-900">Rp 1.550.000</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2.5 bg-gray-50 rounded-lg">
+                        <div><span class="font-bold">Tipe B</span> <span class="text-xs text-gray-500">(21-25 Kg)</span></div>
+                        <span class="font-bold text-gray-900">Rp 1.900.000</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2.5 bg-gray-50 rounded-lg">
+                        <div><span class="font-bold">Tipe C</span> <span class="text-xs text-gray-500">(26-30 Kg)</span></div>
+                        <span class="font-bold text-gray-900">Rp 2.350.000</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2.5 bg-gray-50 rounded-lg">
+                        <div><span class="font-bold">Tipe D</span> <span class="text-xs text-gray-500">(31-35 Kg)</span></div>
+                        <span class="font-bold text-gray-900">Rp 2.750.000</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2.5 bg-amber-50 border border-dashed border-amber-200 rounded-lg">
+                        <div><span class="font-bold">Tipe E</span> <span class="text-xs text-gray-500">(> 35 Kg)</span></div>
+                        <span class="text-amber-700 font-medium">Hubungi Admin</span>
+                    </div>
+                    <a href="https://wa.me/6281235117043?text=Halo%20Admin%20Uhamka%20Agrovision,%20saya%20ingin%20tanya%20stok%20dan%20order%20Domba%20Dugul" target="_blank" class="block w-full text-center bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold py-2.5 rounded-xl transition text-xs">
+                        Tanya Stok / Pesan Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <div class="border border-gray-200 rounded-2xl overflow-hidden">
+                <div class="bg-amber-700 p-4 text-white text-center">
+                    <h4 class="text-xl font-bold">Domba Jantan Tanduk</h4>
+                </div>
+                <div class="h-80 bg-gray-100 relative">
+                    <img src="/assets/images/domba-tanduk.png" alt="Domba Jantan Tanduk" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4 space-y-2.5 text-sm">
+                    <div class="flex justify-between items-center p-2.5 bg-gray-50 rounded-lg">
+                        <div><span class="font-bold">Tipe A</span> <span class="text-xs text-gray-500">(17-20 Kg)</span></div>
+                        <span class="font-bold text-gray-900">Rp 1.750.000</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2.5 bg-gray-50 rounded-lg">
+                        <div><span class="font-bold">Tipe B</span> <span class="text-xs text-gray-500">(21-25 Kg)</span></div>
+                        <span class="font-bold text-gray-900">Rp 2.250.000</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2.5 bg-gray-50 rounded-lg">
+                        <div><span class="font-bold">Tipe C</span> <span class="text-xs text-gray-500">(26-30 Kg)</span></div>
+                        <span class="font-bold text-gray-900">Rp 2.650.000</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2.5 bg-gray-50 rounded-lg">
+                        <div><span class="font-bold">Tipe D</span> <span class="text-xs text-gray-500">(31-35 Kg)</span></div>
+                        <span class="font-bold text-gray-900">Rp 3.150.000</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2.5 bg-amber-50 border border-dashed border-amber-200 rounded-lg">
+                        <div><span class="font-bold text-amber-800">Tipe E</span> <span class="text-xs text-gray-500">(> 35 Kg)</span></div>
+                        <span class="text-amber-700 font-medium">Hubungi Admin</span>
+                    </div>
+                    <a href="https://wa.me/6281235117043?text=Halo%20Admin%20Uhamka%20Agrovision,%20saya%20ingin%20tanya%20stok%20dan%20order%20Domba%20Tanduk" target="_blank" class="block w-full text-center bg-amber-50 hover:bg-amber-100 text-amber-700 font-bold py-2.5 rounded-xl transition text-xs">
+                        Tanya Stok / Pesan Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lokasi" class="py-16 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <span class="text-emerald-600 font-bold text-sm tracking-wider uppercase block mb-2">Lokasi Peternakan</span>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Kunjungi Kandang Kami</h3>
+                    
+                    <div class="space-y-4 text-gray-600">
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-emerald-600 mt-1.5 text-lg"></i>
+                            <p>Jl. Kapten Sumantri, Kampung Bondol Desa Bendungan, Kecamatan Jonggol, Kabupaten Bogor</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone text-emerald-600 text-lg"></i>
+                            <p>081235117043</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-envelope text-emerald-600 text-lg"></i>
+                            <p>peternakan@uhamka.ac.id</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 h-80">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.24729177651!2d107.0543666!3d-6.4712497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69bc53934d4021%3A0x401576d14fed9b0!2sJonggol%2C%20Bogor%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1710000000000!5m2!1sen!2sid" 
+                        class="w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm px-4">
+        <div class="max-w-md mx-auto space-y-3">
+            <p class="font-bold text-white">Uhamka Agrovision © 2026</p>
+            <p class="text-xs">Menyediakan domba berkualitas tinggi, sehat, dan terawat untuk kebutuhan harian, bisnis kuliner, aqiqah, dan kurban.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
